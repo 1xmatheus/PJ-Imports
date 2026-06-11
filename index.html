@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="stylems.css">
+    <title>Loja Online - PJ Imports</title>
+</head>
+
+<body>
+
+    <!-- ========== HEADER ========== -->
+    <section>
+        <header>
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#sobre-nos">Sobre</a></li>
+                    <li><a href="#contato">Contato</a></li>
+                </ul>
+                <!-- FUNCIONALIDADE 1: Botão de modo claro/escuro -->
+                <button id="toggle-tema">☀️ Modo Claro</button>
+            </nav>
+            <h1><strong>BEM VINDO À LOJA ONLINE DE PJ IMPORTS</strong></h1>
+            <p>As peças dos seus sonhos a um clique de você!</p>
+        </header>
+    </section>
+
+    <!-- ========== MISSÃO ========== -->
+    <section>
+        <h2>Nossa missão é proporcionar aos nossos clientes a melhor experiência de compra, com produtos de alta qualidade e preços competitivos.</h2>
+    </section>
+
+    <!-- ========== PRODUTOS ========== -->
+    <main>
+        <h2>Produtos em destaque</h2>
+
+        <ul>
+            <li>
+                <div class="card">
+                    <button>
+                        <a href="https://www.nike.com/br/t/air-max-plus-masculino-shoe-KkLcGR/CZ5591-001">
+                            NIKE TN ALL BLACK - R$ 1.599,99
+                            <p><img src="https://i.pinimg.com/originals/c5/24/10/c52410e092685084bc160514420f9368.png"
+                                alt="Nike Air Max Plus TN All Black" width="300"></p>
+                        </a>
+                    </button>
+                </div>
+            </li>
+            <li>
+                <div class="card">
+                    <button>
+                        <a href="https://www.nike.com/br/t/air-max-95-masculino-shoe-7c8200-001">
+                            AIR MAX 95 ALL WHITE - R$ 850,00
+                            <p><img src="https://static.nike.com/a/images/w_1280,q_auto,f_auto/qaitk2ovroff1qs9kxh1/nike-air-max-95-premium-summit-white-release-date.jpg"
+                                alt="Nike Air Max 95 All White" width="300"></p>
+                        </a>
+                    </button>
+                </div>
+            </li>
+            <li>
+                <div class="card">
+                    <button>
+                        <a href="https://www.newbalance.com.br/tenis-new-balance-740-unisex-1357241/p">
+                            NEW BALANCE 740 - R$ 750,00
+                            <p><img src="https://2app.kicksonfire.com/kofapp/upload/events_master_images/ipad_new-balance-740-white-silver.png"
+                                alt="New Balance 740" width="300"></p>
+                        </a>
+                    </button>
+                </div>
+            </li>
+        </ul>
+
+        <button class="btn-comprar">Comprar</button>
+
+        <!-- ========== TABELA ========== -->
+        <div class="card2">
+            <table border="1">
+                <thead>
+                    <tr>
+                        <th>Marca</th>
+                        <th>Modelo</th>
+                        <th>Materiais</th>
+                        <th>Prazo de Entrega</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Nike</td>
+                        <td>Air Max 95</td>
+                        <td>Mesh, Couro sintético e Borracha</td>
+                        <td>5–7 dias úteis</td>
+                    </tr>
+                    <tr>
+                        <td>Nike</td>
+                        <td>Air Max Plus TN</td>
+                        <td>Mesh, TPU, Borracha e Espuma EVA</td>
+                        <td>5–7 dias úteis</td>
+                    </tr>
+                    <tr>
+                        <td>New Balance</td>
+                        <td>740</td>
+                        <td>Mesh, Couro sintético, Borracha e EVA</td>
+                        <td>5–7 dias úteis</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- ========== VÍDEO ========== -->
+        <video controls loop>
+            <source src="./videosynaworld.mp4" type="video/mp4">
+            <track kind="subtitles" src="./videoplayback (1).mp4.vtt" srclang="pt-BR" label="Português">
+        </video>
+
+        <!-- ========== SOBRE NÓS ========== -->
+        <section id="sobre-nos">
+            <h2>Sobre Nós</h2>
+            <p>Somos uma empresa especializada na importação de peças de roupa, dedicada a trazer tendências internacionais com qualidade e estilo para o mercado brasileiro. Trabalhamos com fornecedores selecionados e acompanhamos de perto cada etapa do processo, garantindo produtos que aliam design moderno, conforto e excelente custo-benefício. Nosso compromisso é oferecer aos nossos clientes uma experiência confiável, com variedade, agilidade e atenção aos detalhes, sempre conectando você ao que há de melhor no cenário da moda global.</p>
+        </section>
+
+        <!-- ========== CONTATO ========== -->
+        <section id="contato">
+            <h2>Entre em contato</h2>
+
+            <!-- FUNCIONALIDADE 2: Formulário com validação JavaScript -->
+            <form id="formulario-contato">
+
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" name="nome" placeholder="Seu nome completo">
+                <span id="erro-nome" class="erro-campo"></span>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="seu@email.com">
+                <span id="erro-email" class="erro-campo"></span>
+
+                <label for="mensagem">Mensagem:</label>
+                <textarea id="mensagem" name="mensagem" placeholder="Escreva sua mensagem aqui..."></textarea>
+                <span id="erro-mensagem" class="erro-campo"></span>
+
+                <button type="submit">Enviar</button>
+            </form>
+
+            <!-- Mensagem exibida após envio bem-sucedido -->
+            <div id="mensagem-sucesso">
+                ✅ Mensagem enviada com sucesso! Em breve entraremos em contato.
+            </div>
+        </section>
+
+        <!-- ========== FOOTER ========== -->
+        <footer>
+            <p>Siga-nos nas redes sociais:</p>
+            <ul>
+                <li><a href="#">Facebook</a></li>
+                <li><a href="#">Instagram</a></li>
+            </ul>
+            <p>&copy; 2026 PJ DA FONTE — Todos os direitos reservados.</p>
+        </footer>
+
+    </main>
+
+    <!-- Script carregado no final do body para garantir que o DOM já está pronto -->
+    <script src="script.js"></script>
+
+</body>
+</html>

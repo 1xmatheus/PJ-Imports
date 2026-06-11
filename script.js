@@ -1,91 +1,49 @@
-// =============================================
-// FUNCIONALIDADE 1: MODO CLARO / ESCURO
-// =============================================
+document.addEventListener("DOMContentLoaded", () => {
 
-const toggleBtn = document.getElementById('toggle-tema');
+    const themeToggleBtn = document.getElementById("theme-toggle");
+    const body = document.body;
 
-// Verifica se o usuário já tinha preferência salva
-const temaSalvo = localStorage.getItem('tema');
-if (temaSalvo === 'claro') {
-    document.body.classList.add('modo-claro');
-    toggleBtn.textContent = '🌙 Modo Escuro';
-}
-
-toggleBtn.addEventListener('click', function () {
-    document.body.classList.toggle('modo-claro');
-    const modoAtual = document.body.classList.contains('modo-claro');
-
-    if (modoAtual) {
-        toggleBtn.textContent = '🌙 Modo Escuro';
-        localStorage.setItem('tema', 'claro');
-    } else {
-        toggleBtn.textContent = '☀️ Modo Claro';
-        localStorage.setItem('tema', 'escuro');
-    }
-});
-
-
-// =============================================
-// FUNCIONALIDADE 2: VALIDAÇÃO DO FORMULÁRIO
-// =============================================
-
-const formulario = document.getElementById('formulario-contato');
-const mensagemSucesso = document.getElementById('mensagem-sucesso');
-
-formulario.addEventListener('submit', function (evento) {
-    evento.preventDefault(); // Impede o envio real do formulário
-
-    const nome = document.getElementById('nome').value.trim();
-    const email = document.getElementById('email').value.trim();
-    const mensagem = document.getElementById('mensagem').value.trim();
-
-    // Limpa erros anteriores
-    limparErros();
-
-    let valido = true;
-
-    // Valida nome
-    if (nome.length < 3) {
-        exibirErro('erro-nome', 'Por favor, insira seu nome completo (mínimo 3 caracteres).');
-        valido = false;
+    if (localStorage.getItem("theme") === "light") {
+        body.classList.add("light-mode");
+        themeToggleBtn.textContent = "🌙 Modo Escuro";
     }
 
-    // Valida email
-    const regexEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (!regexEmail.test(email)) {
-        exibirErro('erro-email', 'Por favor, insira um e-mail válido (ex: nome@email.com).');
-        valido = false;
-    }
 
-    // Valida mensagem
-    if (mensagem.length < 10) {
-        exibirErro('erro-mensagem', 'A mensagem deve ter pelo menos 10 caracteres.');
-        valido = false;
-    }
+    themeToggleBtn.addEventListener("click", () => {
+        body.classList.toggle("light-mode");
+        
 
-    // Se tudo válido, exibe mensagem de sucesso
-    if (valido) {
-        formulario.reset();
-        mensagemSucesso.style.display = 'block';
-
-        // Oculta a mensagem de sucesso após 5 segundos
-        setTimeout(function () {
-            mensagemSucesso.style.display = 'none';
-        }, 5000);
-    }
-});
-
-function exibirErro(idElemento, texto) {
-    const elemento = document.getElementById(idElemento);
-    elemento.textContent = texto;
-    elemento.style.display = 'block';
-}
-
-function limparErros() {
-    const erros = document.querySelectorAll('.erro-campo');
-    erros.forEach(function (erro) {
-        erro.textContent = '';
-        erro.style.display = 'none';
+        if (body.classList.contains("light-mode")) {
+            localStorage.setItem("theme", "light");
+            themeToggleBtn.textContent = "🌙 Modo Escuro";
+        } else {
+            localStorage.setItem("theme", "dark");
+            themeToggleBtn.textContent = "☀️ Modo Claro";
+        }
     });
-    mensagemSucesso.style.display = 'none';
-}
+
+    const form = document.getElementById("contato-form");
+    const feedback = document.getElementById("form-feedback");
+
+    form.addEventListener("submit", (event) => {
+        event.preventDefault(); 
+
+        const nome = document.getElementById("nome").value.trim();
+        const email = document.getElementById("email").value.trim();
+        const mensagem = document.getElementById("mensagem").value.trim();
+
+        if (nome === "" || email === "" || mensagem === "") {
+            feedback.innerHTML = '<div class="alert alert-danger mt-3">Por favor, preencha todos os campos.</div>';
+            return;
+        }
+
+        if (!email.includes("@") || !email.includes(".")) {
+            feedback.innerHTML = '<div class="alert alert-danger mt-3">Por favor, insira um e-mail válido.</div>';
+            return;
+        }
+
+
+        feedback.innerHTML = '<div class="alert alert-success mt-3">Mensagem enviada com sucesso! Entraremos em contato em breve.</div>';
+        form.reset(); 
+    });
+});

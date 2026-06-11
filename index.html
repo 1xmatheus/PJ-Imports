@@ -3,79 +3,118 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <link rel="stylesheet" href="stylems.css">
-    <title>Loja Online - PJ Imports</title>
+    <title>Loja online de PJ IMPORTS</title>
 </head>
-
+ 
 <body>
-
-    <!-- ========== HEADER ========== -->
-    <section>
-        <header>
-            <nav>
-                <ul>
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#sobre-nos">Sobre</a></li>
-                    <li><a href="#contato">Contato</a></li>
-                </ul>
-                <!-- FUNCIONALIDADE 1: Botão de modo claro/escuro -->
-                <button id="toggle-tema">☀️ Modo Claro</button>
-            </nav>
+      <header class="text-center pt-5 mt-4">
+        <div class="container py-4">
             <h1><strong>BEM VINDO À LOJA ONLINE DE PJ IMPORTS</strong></h1>
-            <p>As peças dos seus sonhos a um clique de você!</p>
-        </header>
-    </section>
+            <p>As peças dos seus sonhos à um clique de você!</p>
+        </div>
+    </header>
 
-    <!-- ========== MISSÃO ========== -->
-    <section>
-        <h2>Nossa missão é proporcionar aos nossos clientes a melhor experiência de compra, com produtos de alta qualidade e preços competitivos.</h2>
-    </section>
-
-    <!-- ========== PRODUTOS ========== -->
-    <main>
-        <h2>Produtos em destaque</h2>
-
-        <ul>
-            <li>
-                <div class="card">
-                    <button>
-                        <a href="https://www.nike.com/br/t/air-max-plus-masculino-shoe-KkLcGR/CZ5591-001">
-                            NIKE TN ALL BLACK - R$ 1.599,99
-                            <p><img src="https://i.pinimg.com/originals/c5/24/10/c52410e092685084bc160514420f9368.png"
-                                alt="Nike Air Max Plus TN All Black" width="300"></p>
-                        </a>
-                    </button>
+    <nav class="navbar navbar-dark bg-dark fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand">Menu de Navegação</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
+                <div class="offcanvas-header">
+                    <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">Menu</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                 </div>
-            </li>
-            <li>
-                <div class="card">
-                    <button>
+                <div class="offcanvas-body">
+                    <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#sobre-nos">Sobre</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Mais
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-dark">
+                                <li><a class="dropdown-item" href="#contato">Contato</a></li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li><a class="dropdown-item" href="#redes">Redes Sociais</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <form class="d-flex mt-3" role="search">
+                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-success" type="submit">Pesquisar</button>
+                    </form>
+                    <button id="theme-toggle" class="btn btn-outline-light mt-3">☀️ Modo Claro</button>
+                </div>
+            </div>
+        </div>
+    </nav>
+ 
+    <section class="text-center py-3">
+        <div class="container">
+            <h2>Nossa missão é proporcionar aos nossos clientes a melhor experiência de compra, com produtos de alta qualidade e preços competitivos.</h2>
+        </div>
+    </section>
+
+    <main class="container py-4">
+ 
+        <h2 class="text-center mb-4">Produtos em destaque</h2>
+ 
+        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4 justify-content-center">
+ 
+            <div class="col">
+                <div class="card h-100 text-center">
+                    <div class="card-body">
+                        <a href="https://www.nike.com/br/t/air-max-plus-masculino-shoe-KkLcGR/CZ5591-001">
+                            NIKE TN ALL BLACK - R$ 1599,99
+                            <p class="mt-2">
+                                <img class="img-fluid" src="https://i.pinimg.com/originals/c5/24/10/c52410e092685084bc160514420f9368.png" alt="Black Nike Air Max Plus TN sneaker with mesh and synthetic upper, displayed against a white background.">
+                            </p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+ 
+            <div class="col">
+                <div class="card h-100 text-center">
+                    <div class="card-body">
                         <a href="https://www.nike.com/br/t/air-max-95-masculino-shoe-7c8200-001">
                             AIR MAX 95 ALL WHITE - R$ 850,00
-                            <p><img src="https://static.nike.com/a/images/w_1280,q_auto,f_auto/qaitk2ovroff1qs9kxh1/nike-air-max-95-premium-summit-white-release-date.jpg"
-                                alt="Nike Air Max 95 All White" width="300"></p>
+                            <p class="mt-2">
+                                <img class="img-fluid" src="https://static.nike.com/a/images/t_web_pdp_535_v2/f_auto,u_9ddf04c7-2a9a-4d76-add1-d15af8f0263d,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/33f3ce30-be1a-457e-8eae-8842b978eeef/NIKE+AIR+MAX+95+BIG+BUBBLE.png" alt="White Nike Air Max 95 sneaker displayed against a white background.">
+                            </p>
                         </a>
-                    </button>
+                    </div>
                 </div>
-            </li>
-            <li>
-                <div class="card">
-                    <button>
+            </div>
+ 
+            <div class="col">
+                <div class="card h-100 text-center">
+                    <div class="card-body">
                         <a href="https://www.newbalance.com.br/tenis-new-balance-740-unisex-1357241/p">
                             NEW BALANCE 740 - R$ 750,00
-                            <p><img src="https://2app.kicksonfire.com/kofapp/upload/events_master_images/ipad_new-balance-740-white-silver.png"
-                                alt="New Balance 740" width="300"></p>
+                            <p class="mt-2">
+                                <img class="img-fluid" src="https://2app.kicksonfire.com/kofapp/upload/events_master_images/ipad_new-balance-740-white-silver.png" alt="White New Balance 740 sneaker displayed against a white background.">
+                            </p>
                         </a>
-                    </button>
+                    </div>
                 </div>
-            </li>
-        </ul>
+            </div>
+ 
+        </div>
 
-        <button class="btn-comprar">Comprar</button>
-
-        <!-- ========== TABELA ========== -->
-        <div class="card2">
-            <table border="1">
+        <div class="text-center mt-4">
+            <button class="btn-comprar">Comprar</button>
+        </div>
+ 
+        <div class="table-responsive mt-5">
+            <table class="table table-bordered text-center align-middle">
                 <thead>
                     <tr>
                         <th>Marca</th>
@@ -88,79 +127,86 @@
                     <tr>
                         <td>Nike</td>
                         <td>Air Max 95</td>
-                        <td>Mesh, Couro sintético e Borracha</td>
-                        <td>5–7 dias úteis</td>
+                        <td>Mesh, Couro sintético e Borracha.</td>
+                        <td>5-7 dias úteis</td>
                     </tr>
                     <tr>
                         <td>Nike</td>
                         <td>Air Max Plus TN</td>
-                        <td>Mesh, TPU, Borracha e Espuma EVA</td>
-                        <td>5–7 dias úteis</td>
+                        <td>Mesh, TPU (plástico rígido), Borracha e Espuma EVA.</td>
+                        <td>5-7 dias úteis</td>
                     </tr>
                     <tr>
                         <td>New Balance</td>
                         <td>740</td>
-                        <td>Mesh, Couro sintético, Borracha e EVA</td>
-                        <td>5–7 dias úteis</td>
+                        <td>Mesh, Couro sintético, Borracha e EVA.</td>
+                        <td>5-7 dias úteis</td>
                     </tr>
                 </tbody>
             </table>
         </div>
-
-        <!-- ========== VÍDEO ========== -->
-        <video controls loop>
-            <source src="./videosynaworld.mp4" type="video/mp4">
-            <track kind="subtitles" src="./videoplayback (1).mp4.vtt" srclang="pt-BR" label="Português">
-        </video>
-
-        <!-- ========== SOBRE NÓS ========== -->
-        <section id="sobre-nos">
+ 
+        <div class="text-center mt-4">
+            <video
+                controls
+                loop
+                class="img-fluid rounded video-principal">
+                <source src="./videosynaworld.mp4" type="video/mp4">
+                <track
+                    kind="subtitles"
+                    src="./videoplayback (1).mp4.vtt"
+                    srclang="pt-br"
+                    label="Português">
+            </video>
+        </div>
+ 
+        <section id="sobre-nos" class="text-center mt-5 py-4">
             <h2>Sobre Nós</h2>
-            <p>Somos uma empresa especializada na importação de peças de roupa, dedicada a trazer tendências internacionais com qualidade e estilo para o mercado brasileiro. Trabalhamos com fornecedores selecionados e acompanhamos de perto cada etapa do processo, garantindo produtos que aliam design moderno, conforto e excelente custo-benefício. Nosso compromisso é oferecer aos nossos clientes uma experiência confiável, com variedade, agilidade e atenção aos detalhes, sempre conectando você ao que há de melhor no cenário da moda global.</p>
+            <br>
+            <p class="mx-auto" style="max-width: 1000px; font-size: 1.5rem; ">
+                Somos uma empresa especializada na importação de peças de roupa, dedicada a trazer tendências internacionais com qualidade e estilo para o mercado brasileiro. Trabalhamos com fornecedores selecionados e acompanhamos de perto cada etapa do processo, garantindo produtos que aliam design moderno, conforto e excelente custo-benefício. Nosso compromisso é oferecer aos nossos clientes uma experiência confiável, com variedade, agilidade e atenção aos detalhes, sempre conectando você ao que há de melhor no cenário da moda global.
+            </p>
         </section>
-
-        <!-- ========== CONTATO ========== -->
-        <section id="contato">
-            <h2>Entre em contato</h2>
-
-            <!-- FUNCIONALIDADE 2: Formulário com validação JavaScript -->
-            <form id="formulario-contato">
-
-                <label for="nome">Nome:</label>
-                <input type="text" id="nome" name="nome" placeholder="Seu nome completo">
-                <span id="erro-nome" class="erro-campo"></span>
-
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" placeholder="seu@email.com">
-                <span id="erro-email" class="erro-campo"></span>
-
-                <label for="mensagem">Mensagem:</label>
-                <textarea id="mensagem" name="mensagem" placeholder="Escreva sua mensagem aqui..."></textarea>
-                <span id="erro-mensagem" class="erro-campo"></span>
-
-                <button type="submit">Enviar</button>
-            </form>
-
-            <!-- Mensagem exibida após envio bem-sucedido -->
-            <div id="mensagem-sucesso">
-                ✅ Mensagem enviada com sucesso! Em breve entraremos em contato.
+ 
+        <section id="contato" class="mt-5 py-4">
+            <h2 class="text-center mb-4">Entre em contato</h2>
+            <div class="row justify-content-center">
+                <div class="col-12 col-md-8 col-lg-6">
+                    <form id="contato-form">
+                        <div class="mb-3">
+                            <label for="nome" class="form-label">Nome:</label>
+                            <input type="text" id="nome" name="nome" class="form-control">
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Email:</label>
+                            <input type="email" id="email" name="email" class="form-control">
+                        </div>
+                        <div class="mb-3">
+                            <label for="mensagem" class="form-label">Mensagem:</label>
+                            <textarea id="mensagem" name="mensagem" class="form-control" rows="5"></textarea>
+                        </div>
+                        <div class="text-center">
+                            <button type="submit" class="btn-comprar">Enviar</button>
+                        </div>
+                        <div id="form-feedback" class="text-center mt-3"></div>
+                    </form>
+                </div>
             </div>
         </section>
-
-        <!-- ========== FOOTER ========== -->
-        <footer>
-            <p>Siga-nos nas redes sociais:</p>
-            <ul>
-                <li><a href="#">Facebook</a></li>
-                <li><a href="#">Instagram</a></li>
-            </ul>
-            <p>&copy; 2026 PJ DA FONTE — Todos os direitos reservados.</p>
-        </footer>
-
+ 
     </main>
-
-    <!-- Script carregado no final do body para garantir que o DOM já está pronto -->
+ 
+    <footer id="redes">
+        <p>Siga-nos nas redes sociais:</p>
+        <ul class="list-unstyled d-flex justify-content-center gap-3">
+            <li><a href="#" class="text-white">Facebook</a></li>
+            <li><a href="#" class="text-white">Instagram</a></li>
+        </ul>
+        <p class="mt-3">&copy; 2026 PJ DA FONTE - Todos os direitos reservados.</p>
+    </footer>
+ 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    
     <script src="script.js"></script>
-
 </body>
 </html>
